@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Lugx For Real</title>
+</head>
+<body class="bg-white">
+    <!-- Navigation bar -->
+    <div class="relative  bg-blue-600 p-10 rounded-b-[200px] pb-40 ">
+        <div class="flex justify-between relative">
+            <div><img src="images/lugx-logo.png" alt="lugx logo"></div>
+            <div class="flex gap-12 text-lg items-center max-lg:hidden">
+                <div class="bg-blue-400 rounded-full px-4 py-1 cursor-pointer">Home</div>
+                <div class="hover:bg-blue-400 rounded-full px-4 py-1 cursor-pointer">Our Shop</div>
+                <div class="hover:bg-blue-400 rounded-full px-4 py-1 cursor-pointer">Product Detail</div>
+                <div class="hover:bg-blue-400 rounded-full px-4 py-1 cursor-pointer">Contact Us</div>
+                <div class="bg-red-400 rounded-full px-4 py-1 cursor-pointer">SIGN IN</div>
+            </div>
+            <div class="flex items-center text-3xl lg:hidden cursor-pointer">
+                <i id="open" class='header__btn-open bxr fa-solid fa-bars'></i> 
+                
+                <i id="close" class='hidden header__btn-close fa-solid fa-x'></i> 
+            </div>
+        </div>
+        <!-- **********Responsive purpose*********** -->
+        <div id="nav" class="hidden lg:hidden grid  gap-4 text-center shadow-xl  bg-white text-black absolute top-32 items-center right-0 left-0 mx-16 rounded-b-[50px]">
+            <div class="px-4 py-1  cursor-pointer">Home</div>
+            <div class=" px-4 py-1 cursor-pointer">Our Shop</div>
+            <div class=" px-4 py-1 cursor-pointer">Product Detail</div>
+            <div class=" px-4 py-1 cursor-pointer">Contact Us</div>
+            <div class=" px-4 py-1 cursor-pointer">SIGN IN</div>
+        </div>
+        <!-- ********************************************** -->
+        <!-- Welcome division -->
+        <div class="flex justify-around mt-32 flex-col xl:grid xl:grid-cols-2 xl:gap-20">
+            <div class="flex flex-col justify-center gap-6 text-center items-center lg:mx-32 xl:mx-0 xl:text-start">
+                <div class="text-lg font-bold ">WELCOME TO LUGX</div>
+                <div class="text-4xl font-extrabold mb-8">BEST GAMING SITE EVER!</div>
+                <div class="font-semibold mb-8">LUGX Gaming is free Bootstrap 5 HTML CSS Website template for your gaming websites. 
+                    You <br class="max-lg:hidden">can download and use this layout for commercial puposes. Please tell your friends about 
+                    <br class="max-lg:hidden">TemplateMo.</div>
+                <div class="flex w-full h-14 rounded-full text-black text-lg bg-white relative lg:mx-32">
+                    <input class="bg-white rounded-full  w-full"  type="text" placeholder="My name is IGIRANEZA Theogene I'm software developer from the German">
+                    <div class=" flex justify-center items-center bg-red-400 w-40 h-14 rounded-full absolute right-0  text-white font-semibold">SEARCH NOW</div>
+                </div>
+            </div>
+            <div class="relative mt-10 flex justify-center lg:mx-32">
+                <img class="rounded-3xl relative w-full" src="images/lugx-banner-image.jpg" alt="Man in black cap">
+                <div class="flex justify-center items-center rounded-full text-2xl font-extrabold bg-blue-600 h-12 w-24 absolute top-4 right-4">$22</div>
+                <div class="flex justify-center items-center rounded-full text-3xl font-extrabold bg-red-400 h-28 w-28 absolute -left-6 -bottom-6 ">-40%</div>
+            </div>
+        </div>
+    </div>
+    <!-- Features -->
+<div class="relative flex flex-1 mx-16 justify-center items-center">
+    <div class="absolute -top-20 w-full flex flex-col  items-center text-black justify-center gap-10 lg:grid lg:grid-cols-2 xl:flex xl:flex-row xl:px-24">
+        <!-- Feature 1 -->
+        <div class="shadow-all flex flex-col h-52 w-full flex-1 justify-center items-center  gap-8  rounded-3xl bg-white cursor-pointer ">
+            <div class="bg-blue-600 rounded-full hover:bg-red-400"><img class="m-8" src="images/featured-01.png" alt="featured-01"></div>
+            <div class="font-bold"><p>FREE STORAGE</p></div>
+        </div>
+        <!-- Feature 2 -->
+        <div class=" shadow-all flex flex-col h-52 w-full flex-1 justify-center items-center  gap-8  rounded-3xl bg-white cursor-pointer ">
+            <div class="bg-blue-600 rounded-full hover:bg-red-400"><img class="m-8" src="images/featured-02.png" alt="featured-02"></div>
+            <div class="font-bold"><p>USER MORE</p></div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="shadow-all flex flex-col h-52 w-full flex-1 justify-center items-center  gap-8  rounded-3xl bg-white cursor-pointer ">
+            <div class="bg-blue-600 rounded-full hover:bg-red-400"><img class="m-8" src="images/featured-03.png" alt="featured-03"></div>
+            <div class="font-bold"><p>REPLY READY</p></div>
+        </div>
+        <!-- feature 4 -->
+        <div class="shadow-all flex flex-col h-52 w-full flex-1 justify-center items-center  gap-8  rounded-3xl bg-white cursor-pointer ">
+            <div class="bg-blue-600 rounded-full hover:bg-red-400"><img class="m-8" src="images/featured-04.png" alt="featured-04"></div>
+            <div class="font-bold"><p>EASY LAYOUT</p></div>
+        </div>
+    </div>
+</div>
+    <!-- Trending -->
+    <div class="mt-[800px] lg:mt-[500px] xl:mt-60  text-black mx-4 lg:flex lg:justify-between xl:mx-40">
+        <div >
+            <div class="text-red-500 font-bold">TRENDING</div>
+            <div class="text-3xl font-extrabold">Trending Games</div>
+        </div>
+        <div class="bg-red-500 text-white p-3 px-8 my-auto  rounded-full hidden lg:block">VIEW ALL</div>
+    </div>
+    <!-- Trending grids -->
+    <div class="mt-10 mx-4 flex flex-col gap-8 md:grid md:grid-cols-2 md:gap-12 md:mx-8 xl:flex xl:flex-row xl:justify-center xl:mx-16">
+        <!-- Trending grid 1 -->
+        <div class="group">
+            <div class="relative">
+                <img class="rounded-2xl w-full" src="images/trending-01.jpg" alt="trending-01">
+                <div class="absolute text-white bg-blue-500 w-16 h-16 text-center rounded-xl top-8 right-8"><p class="line-through text-lg font-bold">$28</p> <p class="text-2xl font-extrabold">$20</p></div>
+            </div>
+            <div class="flex justify-between ">
+                <div class="text-black"><p class="text-lg font-bold opacity-60">action</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin Creed</p></div>
+                <div class="bg-red-400 w-12 h-12 flex items-center justify-center rounded-full group-hover:bg-blue-500"><i class="fa-solid fa-bag-shopping"></i></div>
+            </div>
+        </div>
+        <!-- Trending grid 2 -->
+        <div class="group">
+            <div class="relative">
+                <img class="rounded-2xl w-full" src="images/trending-02.jpg" alt="trending-01">
+                <div class="absolute text-white bg-blue-500 w-16 h-10 text-center rounded-xl top-8 right-8"><p class="text-2xl font-extrabold">$24</p></div>
+            </div>
+            <div class="flex justify-between ">
+                <div class="text-black"><p class="text-lg font-bold opacity-60">action</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin Creed</p></div>
+                <div class="bg-red-400 w-12 h-12 flex items-center justify-center rounded-full group-hover:bg-blue-500"><i class="fa-solid fa-bag-shopping"></i></div>
+            </div>
+        </div>
+        <!-- Trending grid 3 -->
+        <div class="group">
+            <div class="relative">
+                <img class="rounded-2xl w-full" src="images/trending-03.jpg" alt="trending-01">
+                <div class="absolute text-white bg-blue-500 w-16 h-16 text-center rounded-xl top-8 right-8"><p class="line-through text-lg font-bold">$64</p> <p class="text-2xl font-extrabold">$44</p></div>
+            </div>
+            <div class="flex justify-between ">
+                <div class="text-black"><p class="text-lg font-bold opacity-60">action</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin Creed</p></div>
+                <div class="bg-red-400 w-12 h-12 flex items-center justify-center rounded-full group-hover:bg-blue-500"><i class="fa-solid fa-bag-shopping"></i></div>
+            </div>
+        </div>
+        <!-- Trending grid 4 -->
+        <div class="group">
+            <div class="relative">
+                <img class="rounded-2xl w-full" src="images/trending-04.jpg" alt="trending-01">
+                <div class="absolute text-white bg-blue-500 w-16 h-10 text-center rounded-xl top-8 right-8"><p class="text-2xl font-extrabold">$32</p></div>
+            </div>
+            <div class="flex justify-between ">
+                <div class="text-black"><p class="text-lg font-bold opacity-60">action</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin Creed</p></div>
+                <div class="bg-red-400 w-12 h-12 flex items-center justify-center rounded-full group-hover:bg-blue-500"><i class="fa-solid fa-bag-shopping"></i></div>
+            </div>
+        </div>
+    </div>
+    <!-- Top games title -->
+    <div class="text-black text-center mt-20 mb-5 lg:mx-8 lg:mb-10 lg:flex lg:flex-row lg:justify-between xl:mx-48">
+        <div >
+            <div class="text-red-500 font-bold">TOP GAMES</div>
+            <div class="text-3xl font-extrabold">Most Played</div>
+        </div>
+        <div class="bg-red-500 text-white p-3 px-8 my-auto  rounded-full hidden lg:block">VIEW ALL</div>
+    </div>
+    <!-- Top games grids -->
+     <div class="mx-4 flex flex-col justify-center gap-14 lg:gap-8 md:grid md:grid-cols-2 lg:flex lg:flex-row lg:mx-8 xl:gap-10">
+        <!-- Top game 1 -->
+        <div class="flex flex-col gap-4">
+            <div><img class="w-full rounded-2xl" src="images/top-game-01.jpg" alt="top-game-01"></div>
+            <div>
+                <div class="text-black text-center"><p class="text-lg font-bold opacity-50">Adventure</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin  <br class="hidden lg:block">  Creed</p></div>
+            </div>
+            <div class="text-center"><button class="bg-red-500 text-white p-3 px-8 rounded-full">EXPLORE</button></div>
+        </div>
+        <!-- Top game 2 -->
+        <div class="flex flex-col gap-4">
+            <div><img class="w-full rounded-2xl" src="images/top-game-02.jpg" alt="top-game-01"></div>
+            <div>
+                <div class="text-black text-center"><p class="text-lg font-bold opacity-50">Adventure</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin <br class="hidden lg:block"> Creed</p></div>
+            </div>
+            <div class="text-center"><button class="bg-red-500 text-white p-3 px-8 rounded-full">EXPLORE</button></div>
+        </div>
+        <!-- Top game 3 -->
+        <div class="flex flex-col gap-4">
+            <div><img class="w-full rounded-2xl" src="images/top-game-03.jpg" alt="top-game-01"></div>
+            <div>
+                <div class="text-black text-center"><p class="text-lg font-bold opacity-50">Adventure</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin <br class="hidden lg:block">  Creed</p></div>
+            </div>
+            <div class="text-center"><button class="bg-red-500 text-white p-3 px-8 rounded-full">EXPLORE</button></div>
+        </div>
+        <!-- Top game 4 -->
+        <div class="flex flex-col gap-4">
+            <div><img class="w-full rounded-2xl" src="images/top-game-04.jpg" alt="top-game-01"></div>
+            <div>
+                <div class="text-black text-center"><p class="text-lg font-bold opacity-50">Adventure</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin <br class="hidden lg:block">  Creed</p></div>
+            </div>
+            <div class="text-center"><button class="bg-red-500 text-white p-3 px-8 rounded-full">EXPLORE</button></div>
+        </div>
+        <!-- Top game 5 -->
+        <div class="flex flex-col gap-4">
+            <div><img class="w-full rounded-2xl" src="images/top-game-05.jpg" alt="top-game-01"></div>
+            <div>
+                <div class="text-black text-center"><p class="text-lg font-bold opacity-50">Adventure</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin <br class="hidden lg:block">  Creed</p></div>
+            </div>
+            <div class="text-center"><button class="bg-red-500 text-white p-3 px-8 rounded-full">EXPLORE</button></div>
+        </div>
+        <!-- Top game 6 -->
+        <div class="flex flex-col gap-4">
+            <div><img class="w-full rounded-2xl" src="images/top-game-06.jpg" alt="top-game-01"></div>
+            <div>
+                <div class="text-black text-center"><p class="text-lg font-bold opacity-50">Adventure</p> <p class="text-xl font-bold group-hover:text-blue-500">Assasin <br class="hidden lg:block">  Creed</p></div>
+            </div>
+            <div class="text-center"><button class="bg-red-500 text-white p-3 px-8 rounded-full">EXPLORE</button></div>
+        </div>
+    </div>
+    <!-- Categories title -->
+    <div class="text-center mt-32 mb-10">
+         <div>
+            <div class="text-red-500 font-bold">CATEGORIES</div>
+            <div class="text-3xl text-black font-extrabold">Top Categories</div>
+        </div>
+        <div class="bg-red-500 text-white p-3 px-8 my-auto  rounded-full hidden">VIEW ALL</div>
+    </div>
+    <!-- Categories Grids -->
+    <div class="mx-4 flex justify-center flex-col gap-10 md:grid md:grid-cols-2 lg:flex lg:flex-row lg:mx-16 lg:gap-10">
+        <!-- Categories grid 1 -->
+        <div class="bg-blue-500 rounded-3xl">
+            <div class="text-white text-center py-6 text-lg font-bold">Action</div>
+            <div class=""><img class="w-full rounded-3xl" src="images/categories-01.jpg" alt="categories"></div>
+        </div>
+        <!-- Categories grid 2 -->
+        <div class="bg-blue-500 rounded-3xl">
+            <div class="text-white text-center py-6 text-lg font-bold">Action</div>
+            <div class=""><img class="w-full rounded-3xl" src="images/categories-05.jpg" alt="categories"></div>
+        </div>
+        <!-- Categories grid 3 -->
+        <div class="bg-blue-500 rounded-3xl">
+            <div class="text-white text-center py-6 text-lg font-bold">Action</div>
+            <div class=""><img class="w-full rounded-3xl" src="images/categories-03.jpg" alt="categories"></div>
+        </div>
+        <!-- Categories grid 4 -->
+        <div class="bg-blue-500 rounded-3xl">
+            <div class="text-white text-center py-6 text-lg font-bold">Action</div>
+            <div class=""><img class="w-full rounded-3xl" src="images/categories-04.jpg" alt="categories"></div>
+        </div>
+        <!-- Categories grid 5 -->
+        <div class="bg-blue-500 rounded-3xl">
+            <div class="text-white text-center py-6 text-lg font-bold">Action</div>
+            <div class=""><img class="w-full rounded-3xl" src="images/categories-05 (1).jpg" alt="categories"></div>
+        </div>
+    </div>
+    <!-- Our shop division -->
+    <!-- Image positioned -->
+    <div class="mt-20 xl:mb-96 flex flex-col lg:relative lg:mb-40 lg:items-center ">
+        <img class="hidden lg:block lg:w-[600px] rounded-3xl" src="images/cta-bg.jpg" alt="cta-bg">
+        <div class="px-20 mt-32 flex flex-col gap-14 lg:absolute lg:bg-white lg:w-96 lg:h-[40em] lg:rounded-3xl lg:gap-36 lg:left-80 xl:left-20">
+            <!-- HEAD -->
+            <div class="">
+                <div class="text-red-500 font-bold lg:mt-20">OUR SHOP</div>
+                <div class="text-3xl font-extrabold text-black">Go Pre-Order Buy & Get Best <br class="hidden md:block"><span class="text-blue-500">Princes</span> For You!</div>
+            </div>
+            <!-- PARAGRAPH -->
+            <div class="text-black font-bold text-lg opacity-55">Lorem ipsum dolor consectetur adipiscing, sed to eiusmod tempor incididunt</div>
+            <div class=""><button class="bg-red-400 text-white p-3 px-8 rounded-full hover:bg-blue-500">SHOP NOW</button></div>
+        </div>
+        <!-- NEWSLETTER -->
+        <div class="px-20 mt-32 flex flex-col gap-14 lg:absolute lg:end-96 xl:end-40 lg:gap-32 lg:top-60  lg:bg-white rounded-3xl lg:h-[30em] lg:w-96 ">
+            <!-- HEADER -->
+            <div class="text-start lg:mt-20">
+                <div class="text-red-500 font-bold">NEWSLETTER</div>
+                <div class="text-3xl font-extrabold text-black">Get Up To $100 Off Just Buy <br class="hidden md:block"><span class="text-blue-500">Subscribe</span> Newsletter!</div>
+            </div>
+            <!-- Input and Subscribe button -->
+            <div class=" md:relative">
+                <input class="pl-4 text-black h-12 w-full rounded-full bg-white border focus:border-4  focus:border-sky-300 focus:outline-none" type="text" placeholder="Your email....">
+                <div class="w-full md:absolute lg:absolute md:w-[15em] lg:right-0 md:end-1 md:top-0"><button class="bg-red-500 text-white w-full  p-3 px-8 lg:px-0 lg:w-32 rounded-full hover:bg-blue-500 lg:absolute lg:right-0">SUBSCRIBE NOW</button></div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer section -->
+     <div class="bg-blue-500 mt-16 pt-6 text-center pb-14 rounded-t-full ">
+        <p>Copyright &copy; 2048 <br class="md:hidden"> LUGX Gaming <br class="md:hidden"> Company, all rights reverved. <br class="md:hidden"> Design: TemplateMo</p>
+     </div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="Lugx.js"></script>
+</body>
+</html>
