@@ -1,36 +1,466 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body class="bg-gray-400 dark:bg-slate-800">
-    <div class="bg-gray-100 dark:bg-slate-600 lg:grid grid-cols-2 2xl:grid-cols-5">
-    <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
-      <div class="xl: max-w-xl">
-      <img class="h-10" src="images/logo.svg" alt="logo">
-      <img class="mt-8 rounded-lg shadow-2xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden" src="images/beach-work.jpg" alt="Programmer">
-      <h1 class="text-2xl mt-6 text-black dark:text-white font-bold sm:mt-8 sm:text-4xl lg:text-3xl">You can work from anywhere. <br class="hidden lg:inline"> <span class="text-indigo-500">Take advantage of it.</span></h1>
-      <p class="text-black mt-3 dark:text-slate-400 sm:mt-4 sm:text-xl">
-        Workcation helps you find work-friendly rentals in beautify
-        location so you can enjoy some nice   weather even when 
-        you're not on vacation
-      </p>
-      <div class="mt-4 space-x-2 sm:mt-6 ">
-        <a class="btn" href="#">Book Your Escape</a>
-        <a class="btn" href="#">Learn More</a>
-      </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Porto University</title>
+</head>
+<body class="bg-white relative">
+    <!-- Drop down section and social media -->
+    <div class="hidden lg:flex justify-between px-4 py-3 bg-gray-800 xl:px-20">
+        <!-- Drop down -->
+        <div class="flex gap-6">
+            <!-- first drop down -->
+            <div>
+                <label class="cursor-pointer flex items-center justify-between w-full gap-2">
+                <input type="checkbox" class="peer hidden">
+                <span class="block ">About the University </span>
+                <i class="fa-solid fa-caret-down transition-transform peer-checked:rotate-180 duration-500"></i>
+                <div class="hidden absolute peer-checked:flex flex-col gap-3 pl-4 mt-[27rem] bg-white z-50 text-black">
+                    <p class="opacity-70">The Faculties</p>
+                    <p class="opacity-70">Mission and Values</p>
+                    <p class="opacity-70">History</p>
+                    <p class="opacity-70">Facts and Figures</p>
+                    <p class="opacity-70">U.Porto in the Rankings</p>
+                    <p class="opacity-70">Awards and Accolades</p>
+                    <p class="opacity-70">Quality and Accreditation</p>
+                    <p class="opacity-70">Sustainability</p>
+                    <p class="opacity-70">Equality, Inclusion and Diversity</p>
+                    <p class="opacity-70">Studies and Reports</p>
+                    <p class="opacity-70">Recruitment Opportunities</p>
+                </div>
+                </label>
+            </div>
+            <!-- Second drop down -->
+            <div>
+                <label class="cursor-pointer flex items-center justify-between w-full gap-2">
+                <input type="checkbox" class="peer hidden">
+                <p>Faculties </p>
+                <i class="fa-solid fa-caret-down transition-transform peer-checked:rotate-180 duration-500"></i>
+                <div class="hidden absolute peer-checked:flex flex-col gap-3 mt-[25rem] bg-white z-50 text-black pl-4">
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Architecture</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Fine Arts</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Sciences</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Nutrition and Food Sciences</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Sport</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Low</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Economics</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Engineering</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Pharmacy</p>
+                    <p><img class="h-5 inline mr-2" src="images_porto/list.svg" alt="list">Faculty of Art and Humanities</p>
+                </div>
+                </label>
+            </div>
+        </div>
+        <!-- Icons -->
+        <div class="flex gap-4">
+            <p><i class="fa-solid fa-newspaper"></i></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+            <p><i class="fa-brands fa-youtube"></i></p>
+            <p><i class="fa-brands fa-linkedin-in"></i></p>
+            <p><i class="fa-brands fa-twitter"></i></p>
+            <p><i class="fa-brands fa-facebook-f"></i></p>
+            <p class="opacity-60 font-bold ml-6 cursor-pointer hover:opacity-100 text-lg">PT</p>
+            <p class="font-bold cursor-pointer text-lg">EN</p>
+        </div>
     </div>
-    <div class="relative hidden lg:block 2xl:col-span-3">
-      <img class="absolute inset-0 w-full h-full object-cover object-center" src="images/beach-work.jpg" alt="Programmer">
+    <!-- Navigation bar -->
+    <div class="flex sticky top-0 z-50 justify-between px-4 py-6 bg-[#d5d5d5] lg:hidden">
+        <div class="flex gap-6">
+
+
+
+            <label class="">
+                <input type="checkbox" class="peer hidden">
+                <p class="flex justify-center items-center cursor-pointer"><img class="h-10 pt-2" src="images_porto/bigMenu.svg" alt="menu"></p>
+                <div class="hidden absolute peer-checked:block text-black w-[15rem] md:w-[30rem] h-[100rem] -ml-4 -mt-14 bg-white">
+                    <div class="flex justify-between px-4 py-5 bg-[#d5d5d5]">
+                        <p><img class="h-12" src="images_porto/logo.svg" alt="logo"></p>
+                        <p class="text-4xl mt-3 cursor-pointer font-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></i></p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mx-4 text-sm py-4 font-semibold"><p>STUDY</p><p><i class="fa-solid fa-angle-right"></i></p></div> <hr class="border-gray-300">
+                        <div class="flex justify-between mx-4 text-sm py-4 font-semibold"><p>RESEARCH</p><p><i class="fa-solid fa-angle-right"></i></p></div><hr class="border-gray-300">
+                        <div class="flex justify-between mx-4 text-sm py-4 font-semibold"><p>INNOVATE</p><p><i class="fa-solid fa-angle-right"></i></p></div><hr class="border-gray-300">
+                        <div class="flex justify-between mx-4 text-sm py-4 font-semibold"><p>LIVE</p><p><i class="fa-solid fa-angle-right"></i></p></div><hr class="border-gray-300">
+                        <div class="flex justify-between mx-4 text-sm py-4 font-semibold"><p>EXPLORE</p><p><i class="fa-solid fa-angle-right"></i></p></div><hr class="border-gray-300">
+                        <div class="h-8 mt-4 flex items-center justify-center"><input type="text" class="bg-white border border-gray-400 w-52 md:w-96 h-8" placeholder="Search"></div>
+                    </div>
+                </div>
+            </label>
+            <p><img class="h-12" src="images_porto/logo.svg" alt="logo"></p>
+                
+        </div>
+        <div>
+
+
+            <label >
+                <input type="checkbox" class="peer hidden">
+                <p class="flex justify-center cursor-pointer items-center mt-2"><img class="h-8" src="images_porto/smallMenu.svg" alt="menu"></p>
+                <div class="hidden absolute peer-checked:block text-black w-[15rem] md:w-[30rem] h-[100rem] -ml-48 md:-ml-[27rem] -mt-14 bg-white">
+                    <div class="flex justify-between px-4 py-6 bg-[#d5d5d5]">
+                        <p class="text-4xl cursor-pointer mt-3 font-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></i></p>
+                        <p><span class="text-lg font-bold opacity-60 mr-4 md:mr-6">PT</span><span class="text-lg font-bold">EN</span></p>
+                    </div>
+                    <div class="flex justify-between mx-4 text-sm py-4 font-semibold"><p>ABOUT THE UNIVERSITY</p><p><i class="fa-solid fa-angle-right"></i></p></div> <hr class="border-gray-300">
+                    <div class="flex justify-between mx-4 text-sm py-4 font-semibold"><p>FACULTIES</p><p><i class="fa-solid fa-angle-right"></i></p></div> <hr class="border-gray-300">
+                </div>
+            </label>
+
+
+        </div>
     </div>
-      
+    <div class="hidden lg:sticky top-0 lg:flex text-black justify-between px-4 items-center py-4 bg-[#d5d5d5] z-30 xl:px-20">
+        <div><img class="h-12" src="images_porto/logo.svg" alt="logo"></div>
+        <div class="flex gap-2 font-bold text-lg">
+            <p class="hover:border-b-2 px-2 cursor-pointer border-gray-400">STUDY</p> 
+            <p class="hover:border-b-2 px-2 cursor-pointer border-gray-400">RESEARCH</p>
+            <p class="hover:border-b-2 px-2 cursor-pointer border-gray-400">INNOVATE</p>
+            <p class="hover:border-b-2 px-2 cursor-pointer border-gray-400">LIVE</p>
+            <p class="hover:border-b-2 px-2 cursor-pointer border-gray-400">EXPLORE</p>
+            <div class="flex gap-10 font-normal ml-4 px-1 border-b border-gray-500 cursor-pointer">
+                <p>Search</p>
+                <p><i class="fa-solid fa-magnifying-glass"></i></p>
+            </div>
+        </div>
     </div>
-    <button id="btn" class="bg-indigo-500 hover:bg-indigo-700 hover:-translate-y-1 transform transition border-white text-white px-6 py-3 mt-6 rounded-lg font-semibold text-center dark:border-slate-800">Mode</button>
+
+    <!-- Background image -->
+
+    <div class="relative">
+        <img class="max-h-[24rem] w-full md:max-h-[32rem] lg:max-h-full" src="images_porto/image1.jpeg" alt="Background">
+        <p class="h-7 w-8 bg-[#a18a4d] absolute top-1/3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="none" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></p>
+        <p class="h-7 w-8 bg-[#a18a4d] absolute right-0 top-1/3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="none" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></p>
+        <div class="absolute w-full bottom-0 h-24 md:h-40 lg:h-52 lg:w-[21rem] xl:w-[32rem] lg:bottom-28 xl:bottom-40 lg:left-24">
+            <div class=" relative h-24 md:h-40 lg:h-52">
+                <div class="absolute inset-0 bg-[#3f3e3d] bg-opacity-80"></div>
+                <div class="text-white absolute ml-6 lg:ml-0  mt-3 font-bold">
+                    <p class="text-xl px-6 xl:text-2xl">U.Porto ranks as the top choice of <br class="hidden md:hidden"> Portugal's best students</p>
+                    <!-- <p class="bg-[#a18a4d] py-2 w-28 text-center mt-3 cursor-progress">See More</p> -->
+                    <p class="hidden lg:block font-normal mt-4 text-sm ml-6 xl:text-lg">U.Porto leads with 11 of the top 25 programmes in the National Competitio for Acess to Higher Education 2025/26.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Title: Study -->
+
+    <div class="text-black mt-20 px-4 flex flex-col gap-6 xl:px-20">
+        <p class="text-5xl text-[#a18a4d]  font-light">Study</p>
+        <div class="flex flex-col gap-6 xl:grid xl:grid-cols-5">
+            <p class="text-3xl font-lato font-bold xl:col-span-2">Your future is here!</p>
+            <p class="text text-lg font-extralight xl:col-span-3">
+                Gathering the most complete offer of training programmes in Portugal, 
+                the 14 faculties of the U.Porto offer rnique conditions to those who 
+                want to build an academic path of excellence and 
+                properly valued by the labour market.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Title: course you're looking for -->
+
+    <div class="text-black mt-20 px-4 xl:px-20">
+        <p class="text-3xl font-lato font-bold mb-6">Which course are you looking for?</p>
+        <div class="flex flex-col gap-8 xl:grid xl:grid-cols-5">
+            <div class="flex flex-col gap-4 col-span-3">
+                <p class="border-2 border-black h-14"><select class="w-full pl-4 h-full border-0 focus:outline-none text-lg focus:ring-0  bg-white">
+                    <option value="faculty" selected>All</option>
+                    <option value="">Bachelor's and Integrated Master's Degrees</option>
+                    <option value="">Master's Degrees</option>
+                    <option value="">Doctorates</option>
+                </select></p>
+                <input type="text" placeholder="Please enter course keywords..." class="h-14 text-xl pl-4 bg-white border-2 focus:outline-none  border-black ">
+                <p class="h-14 bg-[#a18a4d] cursor-pointer flex items-center justify-center hover:border-2 border-[#a18a4d] hover:bg-opacity-0 text-white z-0 text-2xl font-bold hover:text-[#a18a4d] transform duration-100">Search</p>
+            </div>
+            <div class="col-span-2">
+                <p class="xl:hidden">Please enter course keywords.</p>
+                <p class="text-3xl">Courses from A to Z</p>
+                <p class="text-2xl hover:text-[#a18a4d] font-light underline cursor-pointer">Bachelor's and Integrated <br class="hidden xl:block"> Master's Degrees</p>
+                <p class="text-2xl hover:text-[#a18a4d] font-light underline cursor-pointer">Master's Degrees</p>
+                <p class="text-2xl hover:text-[#a18a4d] font-light underline cursor-pointer">Doctorates</p>
+            </div>
+        </div>
+    </div>
+    <!-- Scorlsable -->
+    <div class="mt-20 bg-gray-200 xl:px-20 xl:p-20 pb-20">
+        <!-- head -->
+        <div class="text-black ml-4 sm:flex justify-between">
+            <div class="text-5xl font-light text-[#a18a4d]">News</div>
+            <div class="flex gap-3 mt-4 sm:mt-0  items-center"><p class="text-lg text-[#a18a4d] font-medium">All news </p><p class="h-4 w-4 text-white  rounded-full  flex justify-center items-center bg-[#a18a4d] transform hover:translate-x-1 duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="none" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></p></div>
+        </div>
+        <!-- Actually scorollabe -->
+        <div class="overflow-x-auto overflow-y-hidden">
+            <div class="flex ">
+
+                <div class="text-black bg-white h-[32rem] flex-shrink-0 w-[25rem] mt-10 mx-4  pt-5">
+                    <div class="">
+                        <p class="text-[#a18a4d] px-6">Campus e Comunidade | Multimedia | Video</p>
+                        <p class="px-6 text-2xl mt-8 font-bold">Miguel Carvalhais e o novo diretor da FBAUP</p>
+                    </div>
+                    <div>
+                        <p class="px-6 mt-20">05 September 2025</p>
+                        <img class="" src="images_porto/scorll1.jpeg" alt="news">
+                    </div>
+                </div>
+
+                <div class="text-black flex-shrink-0 bg-white h-[32rem] w-[25rem] mt-10 mx-4  pt-5">
+                    <div class="">
+                        <p class="text-[#a18a4d] px-6">Ciencia e Inovacao</p>
+                        <p class="px-6 text-2xl mt-8 font-bold">Ruben Pereira conquista bolsa ERC de 1,5 milhoes de euros</p>
+                    </div>
+                    <div>
+                        <p class="px-6 mt-20">04 September 2025</p>
+                        <img class="" src="images_porto/scroll2.jpeg" alt="news">
+                    </div>
+                </div>
+
+                <div class="text-black flex-shrink-0 bg-white h-[32rem] w-[25rem] mt-10 mx-4  pt-5">
+                    <div class="">
+                        <p class="text-[#a18a4d] px-6">Ciencia e Inovacao</p>
+                        <p class="px-6 text-2xl mt-8 font-bold">"Super-celulas" cridas no i3S podem revolucionar tratamento de tumores</p>
+                    </div>
+                    <div>
+                        <p class="px-6 mt-20">03 September 2025</p>
+                        <img class="" src="images_porto/scroll3.jpeg" alt="news">
+                    </div>
+                </div>
+
+                <div class="text-black flex-shrink-0 bg-white h-[32rem] w-[25rem] mt-10 mx-4  pt-5">
+                    <div class="">
+                        <p class="text-[#a18a4d] px-6">Campus e Comunidade</p>
+                        <p class="px-6 text-2xl mt-8 font-bold">U.Porto da as boas-vindas a mais de 1.400 estudantes de 55 paises</p>
+                    </div>
+                    <div>
+                        <p class="px-6 mt-20">01 September 2025</p>
+                        <img class="" src="images_porto/scroll4.jpeg" alt="news">
+                    </div>
+                </div>
+
+                <div class="text-black flex-shrink-0 bg-white h-[32rem] w-[25rem] mt-10 mx-4  pt-5">
+                    <div class="">
+                        <p class="text-[#a18a4d] px-6">Desporto | No Mundo</p>
+                        <p class="px-6 text-2xl mt-8 font-bold">U.Porto e bicampea erropeia universitaria de Karate</p>
+                    </div>
+                    <div>
+                        <p class="px-6 mt-20">05 September 2025</p>
+                        <img class="" src="images_porto/scroll5.jpg" alt="news">
+                    </div>
+                </div>
+
+                <div class="text-black flex-shrink-0 bg-white h-[32rem] w-[25rem] mt-10 mx-4  pt-5">
+                    <div class="">
+                        <p class="text-[#a18a4d] px-6">Campus e Comunidade</p>
+                        <p class="px-6 text-2xl mt-8 font-bold">U.Porto e bicampea erropeia universitaria de Karate</p>
+                    </div>
+                    <div>
+                        <p class="px-6 mt-20">05 September 2025</p>
+                        <img class="" src="images_porto/scroll6.jpg" alt="news">
+                    </div>
+                </div>
+
+                <div class="text-black flex-shrink-0 bg-white h-[32rem] w-[25rem] mt-10 mx-4  pt-5">
+                    <div class="">
+                        <p class="text-[#a18a4d] px-6">Campus e Comunidade | Ciencia e Inovacao</p>
+                        <p class="px-6 text-2xl mt-8 font-bold">Universidade do Porto cria Observatorio Mundaial Saude Sexual</p>
+                    </div>
+                    <div>
+                        <p class="px-6 mt-20">22 August 2025</p>
+                        <img class="" src="images_porto/scroll7.jpeg" alt="news">
+                    </div>
+                </div>
+
+                <div class="text-black flex-shrink-0 bg-white h-[32rem] w-[25rem] mt-10 mx-4  pt-5">
+                    <div class="">
+                        <p class="text-[#a18a4d] px-6">No Mundo</p>
+                        <p class="px-6 text-2xl mt-8 font-bold">U.Proto mantem lideranca nacional no ranking de Xangai 2025</p>
+                    </div>
+                    <div>
+                        <p class="px-6 mt-20">21 August 2025</p>
+                        <img class="" src="images_porto/scroll8.jpeg" alt="news">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Who we are -->
+
+    <div class="text-black mt-20 mb-24 ml-4 xl:grid grid-cols-5 xl:p-20">
+        <!-- head -->
+        <div class="text-4xl xl:text-6xl font-light text-[#a18a4d] xl:col-span-2"><p>We are a University of Excellence!</p></div>
+        <!-- content -->
+
+        <div class="flex flex-col gap-8 text-xl mt-10 xl:col-span-3 xl:mt-0">
+            <p class="font-light">
+                With over 100 years of history, the University of Porto is 
+                a <span class="font-normal">leading teaching and scientific research institution 
+                in Portugal and woldwide
+                </span>
+            </p>
+            <p class="font-extralight">
+                Considered <span class="font-normal">the best Portuguese University and one of the best 
+                100 European institutions </span> according to the most important 
+                Higher Eduction ranking, U.Porto combines quality teaching and excellent research 
+                with the best academic exprience.
+            </p>
+            <p>
+                We are waiting for you!
+            </p>
+            <div class="flex items-center gap-2"><p class="text-lg text-[#a18a4d] font-medium">See More </p><p class="h-4 w-4 text-white  rounded-full  flex justify-center items-center bg-[#a18a4d] transform hover:translate-x-1 duration-300 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="none" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></p></div>
+        </div>
+    </div>
+    <hr class="border-2 border-gray-150 mb-20">
+    <!-- Research -->
+
+    <div class="text-black ml-4 xl:px-20 ">
+        <p class="text-4xl xl:text-5xl text-[#a18a4d] mb-6  font-extralight">Research</p>
+        <div class="flex flex-col gap-2 xl:grid grid-cols-2 xl:gap-8">
+            <div class="flex flex-col gap-4 xl:col-span-1">
+                <p class="text-3xl font-lato font-bold mb-2 xl:col-span-2">Research University</p>
+                <p class="font-extralight text-lg tracking-wide">
+                    With 48 research units of a highly qualified scientific community, 
+                    the University of Porto is <span class="font-normal">on of the largest producers of science in Portugal, </span>
+                    contributing to almost 25% of all national sceintfic output.
+                </p>
+                <p class="font-extralight text-lg tracking-wide">
+                    The excellence of our scientific ecosystem is particularly evident 
+                    in  the leading position the University occupeis in the main international 
+                    ranking of Higher Education
+                </p>
+            </div>
+            <div class="col-span-1"><img src="images_porto/people.jpeg" alt=""></div>
+        </div>
+    </div>
+
+    <!-- FIGURES -->
+
+    <div class="bg-[#a18a4d] mt-14 pb-28 md:pb-20">
+        <div class="py-10 xl:px-20">
+            <div class="flex gap-2 justify-end"><p>learn more <p class="h-4 w-4 text-[#a18a4d]  bg-white rounded-full  flex justify-center items-center transform hover:translate-x-1 duration-300 mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="none" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></p></p></div>
+            <div class="flex flex-col justify-center items-center"><img class="filter invert brightness-0 h-28" src="images_porto/mic.svg" alt="micro"></div>
+            <div class="flex flex-col justify-center items-center text-4xl font-bold"><p>U.PORTO IN FIGURES</p></div>
+            <div class="flex flex-col justify-center items-center text-3xl font-light tracking-wider"><p>2022/2023</p></div>
+        </div> 
+        <hr class="mx-3 xl:mx-20"> 
+        
+        <div class="flex flex-col mt-14 gap-12 md:flex-row md:justify-around  xl:px-48">
+            <div class="flex flex-col justify-center items-center "><p class="text-5xl xl:text-4xl font-bold">+300</p><p class="text-3xl font-light tracking-wider">Course</p></div>
+            <div class="flex flex-col justify-center items-center"><p class="text-5xl xl:pt-6 xl:text-4xl font-bold">+35.000</p><p  class="text-3xl font-light tracking-wider">Students <br class="hidden md:block "> enrolled</p></div>
+            <div class="flex flex-col justify-center items-center"><p class="text-5xl xl:pt-0 xl:text-4xl font-bold">48</p><p  class="text-3xl font-light tracking-wider">Research Units</p></div>
+        </div>
+    </div>
+    <!-- Frequently asked -->
+
+    <div class="text-black mt-20 mx-4 flex flex-col gap-8 xl:px-20">
+        <div class="text-4xl xl:text-6xl font-light text-[#a18a4d]"><p>Frequently asked questions</p></div>
+        <div class="lg:hidden">
+            <p class="border-2 border-black h-14"><select class="w-full pl-4 h-full border-0 focus:outline-none text-lg focus:ring-0  bg-white">
+                    <option value="faculty" selected>U.Porto Students</option>
+                    <option value="">international Students</option>
+                    <option value="">Prospective Students</option>
+                    <option value="">Professionals</option>
+                    <option value="">Alumni</option>
+                </select></p>
+        </div>
+        <div class="hidden lg:flex text-lg gap-8 font-semibold  border-b border-black border-opacity-20 py- ">
+            <p class="underline opacity-100  underline-offset-8">U.Porto Students</p>
+            <p class="hover:underline opacity-60 hover:opacity-100  hover:underline-offset-8">international Students</p>
+            <p class="hover:underline opacity-60 hover:opacity-100  hover:underline-offset-8">Prospective Students</p>
+            <p class="hover:underline opacity-60 hover:opacity-100  hover:underline-offset-8">Professionals</p>
+            <p class="hover:underline opacity-60 hover:opacity-100  hover:underline-offset-8">Alumni</p>
+        </div>
+        <div><p class="text-2xl hidden sm:block font-lato font-bold">U.Porto Students</p></div>
+        <div class="sm:flex">
+            <div class="sm:order-1"><img src="images_porto/Students.jpeg" alt=""></div>
+            <div class="flex flex-col gap-4 mt-6 sm:mt-0">
+                <p class="text-2xl sm:hidden font-lato font-bold">U.Porto Students</p>
+                <p class="font-light text-lg">
+                    You have just entered in U.Porto and you feel "lost"? 
+                    Do you want to do a mobility period abroad and you don't know how ? 
+                    You are finishing your course and don't know what is waiting for you out there? 
+                    In this area, we give you the answers you need. We hope to help you!
+                </p>
+                <div class="flex items-center gap-2"><p class="text-lg text-[#a18a4d] font-medium">See More </p><p class="h-4 w-4 text-white  rounded-full  flex justify-center items-center bg-[#a18a4d] transform hover:translate-x-1 duration-300 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="none" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></p></div>
+                <div class="hidden lg:flex gap-3 mt-14 text-white">
+                    <p class="h-10 flex justify-center items-center w-10 bg-[#c0baba] "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="none" stroke-linejoin="round" class="lucide lucide-chevron-left-icon lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg></p>
+                    <p class="h-10 w-10 flex justify-center items-center bg-[#a18a4d] "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="none" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    
+    <div class="text-white bg-[#333333] pl-4 pb-16 mt-20 tracking-wide xl:px-20">
+
+        <!-- Media -->
+        <div class="lg:grid grid-cols-4 lg:pt-20">
+            <p class="text-[#a18a4d] font-bold pt-14 lg:pt-3 lg:row-span-2">Media</p>
+            <p class="font-extralight mt-3 cursor-pointer hover:underline">U.Porto News</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">U.Porto Agenda</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Media Contacts</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Image Manual</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Brochures and Presentations</p>
+        </div>
+
+        <!-- Portals -->
+        <div class="lg:grid grid-cols-4 lg:pt-20">
+            <p class="text-[#a18a4d] font-bold pt-14 lg:pt-3 row-span-5">U.Porto Portals</p>
+            <p class="font-extralight mt-3 cursor-pointer hover:underline">CDUP - U.Porto Sports Center</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Alumni Portal</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">UPadigital <Portal></Portal></p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Education Innovation</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Research and Projects Office</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">U.Porto Innovation</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Talent and Carrer</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Peer Mentoring</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Volunteering at U.Porto</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">U.Porto PRESS</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">U.Porto Shop</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">Funded Projects</p>
+            <p class="font-extralight mt-2 cursor-pointer hover:underline">SAGARRA U.Porto</p>
+
+        </div>
+    </div>
+    <hr class="mx-3 xl:mx-20">
+
+    <!-- Footer Part two -->
+
+    <div class="text-white bg-[#333333] pl-4 pt-14 pb-14 lg:pb-0 tracking-wide xl:px-20">
+        <div class="lg:flex justify-between lg:mr-20">
+            <!-- icons -->
+            <div class="flex gap-10 text-xl pb-10 lg:pb-0 ">
+                <p><i class="fa-solid fa-newspaper"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+                <p><i class="fa-brands fa-youtube"></i></p>
+                <p><i class="fa-brands fa-linkedin-in"></i></p>
+                <p><i class="fa-brands fa-twitter"></i></p>
+                <p><i class="fa-brands fa-facebook-f"></i></p>
+            </div>
+            <!-- contact -->
+            <div class="pb-16 lg:pb-0">
+                <p class="font-bold">Contacts</p>
+                <p class="my-4 font-semibold">Reitoria da Universidade do Porto</p>
+                <p class="font-extralight">Praca Gomes Teixeira</p>
+                <p class="font-extralight">4099-002 Porto, Portugal</p>
+                <p class="mt-4">Tel.:<span class="font-extralight">(+351) 220 408 000</span></p>
+                <p>E-mail:<span class="font-extralight"> up@up.pt</span></p>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-1 text-md lg:flex-row lg:gap-4 lg:py-10">
+            <p class="font-bold">&copy; University of Porto 2025</p>
+            <p class="font-extralight  cursor-pointer hover:underline">Privacy Policy</p>
+            <p class="font-extralight  cursor-pointer hover:underline">Personal Data Protection</p>
+            <p class="font-extralight  cursor-pointer hover:underline">Whistleblowing</p>
+            <p class="font-extralight  cursor-pointer hover:underline">Electronic Yello Book</p>
+            <p class="font-extralight  cursor-pointer hover:underline">Accessibility</p>
+        </div>
+
+    </div>
     <script type="module" src="/src/main.js"></script>
-    <script src="test.js"></script>
-  </body>
+</body>
 </html>
